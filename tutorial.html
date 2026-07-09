@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>使用教程 - Mekanism Card</title>
+  <meta name="description" content="Mekanism Card 模组的完整中文使用教程，包含安装、合成配方、各工具操作方式与技巧。">
+  <link rel="stylesheet" href="./_shared/css/styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="./mekanism-card.html" class="nav-brand">
+        <img src="./assets/super_fusion_card.png" alt="Mekanism Card 图标">
+        Mekanism Card
+      </a>
+      <ul class="nav-links">
+        <li><a href="./mekanism-card.html">介绍</a></li>
+        <li><a href="./tutorial.html" class="active">教程</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero" style="padding-bottom:2.5rem;">
+    <div class="container">
+      <div class="hero-badge"><span class="dot"></span> 完整使用教程</div>
+      <h1><span>教程</span> 中心</h1>
+      <p class="hero-subtitle">从安装到精通，全面掌握 Mekanism Card 四大工具的使用方法与合成配方。</p>
+      <a href="#tools" class="btn">跳转到工具教程</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="install">
+      <div class="container">
+        <div class="section-header" style="text-align:left;margin-left:0;">
+          <h2>安装方法</h2>
+        </div>
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>1. 准备前置模组</h3>
+            <ol>
+              <li>安装 Minecraft <code>1.21.1</code> 与 NeoForge <code>21.1.220+</code></li>
+              <li>安装 Mekanism <code>10.7.14+</code></li>
+              <li>安装 GuideME <code>21.1.15+</code></li>
+              <li>（可选）安装 AE2 <code>19.2+</code> 以使用网络联动</li>
+            </ol>
+          </div>
+          <div class="info-card">
+            <h3>2. 放入 mods 文件夹</h3>
+            <ol>
+              <li>下载 Mekanism Card 模组 jar 文件</li>
+              <li>将 jar 文件放入 <code>.minecraft/mods</code> 文件夹</li>
+              <li>启动游戏，进入存档</li>
+              <li>在创造模式物品栏或合成表中查找“Mekanism 升级卡”分类</li>
+            </ol>
+          </div>
+        </div>
+        <div class="callout">
+          <h4>小提示</h4>
+          <p>首次使用建议先合成一本 <strong>指南书</strong>（书 + 批量升级配置器），右键即可在游戏内查看详细说明。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="quickstart" style="background:var(--bg2);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);">
+      <div class="container">
+        <div class="section-header" style="text-align:left;margin-left:0;">
+          <h2>快速上手</h2>
+        </div>
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>绑定网络存储</h3>
+            <p>许多工具支持从 AE2 / QIO 抽取物品，绑定方式如下：</p>
+            <ul>
+              <li><strong>AE2</strong>：将工具放入无线访问点的链接槽位</li>
+              <li><strong>QIO</strong>：潜行 + 右键已选择频道的 QIO 方块</li>
+              <li><strong>消耗顺序</strong>：背包 &gt; AE2 &gt; QIO</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <h3>通用操作</h3>
+            <ul>
+              <li><strong>右键空气</strong>：切换工具模式</li>
+              <li><strong>潜行 + 右键空气</strong>：切换半径 / 选区模式</li>
+              <li><strong>中键机器</strong>：自动安装所有支持的升级</li>
+              <li><strong>右键机器</strong>：执行当前模式的主要操作</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tools">
+      <div class="container">
+        <div class="section-header">
+          <h2>工具详解</h2>
+          <p>下面分别介绍四件核心工具的使用方法、注意事项与进阶技巧。</p>
+        </div>
+
+        <article class="tool-section" id="ultimate-tier-installer">
+          <img src="./assets/ultimate_tier_installer.png" alt="终极等级安装器" class="tool-icon">
+          <div>
+            <h3>终极等级安装器</h3>
+            <p>一键将任意 Mekanism 机器升级到终极等级。内置 200,000 FE 能量，每次升级消耗 1,000 FE。如果安装了通用机械扩展，还支持继续升级到绝对、至尊、宇宙、无限等级。</p>
+            <h4>使用方法</h4>
+            <ul>
+              <li>右键机器：将单台机器升级到终极等级</li>
+              <li>Ctrl + 右键：切换区域升级模式，右键后升级所有相连机器</li>
+              <li>潜行 + 右键 QIO 方块：绑定 QIO 频道</li>
+              <li>将工具放入无线访问点链接槽：绑定 AE2 网络</li>
+            </ul>
+            <h4>注意事项</h4>
+            <ul>
+              <li>升级物品优先从背包消耗，不足时自动从 AE2 / QIO 抽取</li>
+              <li>区域模式下，所有相连机器会逐级消耗对应安装器</li>
+              <li>确保工具能量充足，否则无法执行升级</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="tool-section" id="mass-upgrade-configurator">
+          <img src="./assets/mass_upgrade_configurator.png" alt="批量升级配置器" class="tool-icon">
+          <div>
+            <h3>批量升级配置器</h3>
+            <p>批量为 Mekanism 机器安装或移除升级模块。工具会根据背包、AE2、QIO 中的可用升级自动检测并执行操作。</p>
+            <h4>模式切换</h4>
+            <ul>
+              <li>右键空气：切换安装 / 移除模式</li>
+              <li>潜行 + 右键空气：切换半径模式 / 选区模式</li>
+            </ul>
+            <h4>执行操作</h4>
+            <ul>
+              <li><strong>半径模式</strong>：潜行 + 右键机器，对所有相邻连接的同类型机器执行操作</li>
+              <li><strong>选区模式</strong>：潜行 + 右键设置两个角点，再右键机器对选区内所有机器执行操作</li>
+              <li><strong>中键机器</strong>：自动为该机器安装所有支持的升级模块（每种升到满级）</li>
+            </ul>
+            <h4>视觉反馈</h4>
+            <ul>
+              <li>绿色轮廓 = 安装模式</li>
+              <li>红色轮廓 = 移除模式</li>
+              <li>灰色轮廓 = 无可用升级</li>
+            </ul>
+            <figure>
+              <img src="./assets/mass_upgrade_configurator_guide.png" alt="批量升级配置器预览">
+              <figcaption>批量升级配置器在游戏中的使用效果预览</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="tool-section" id="memory-card">
+          <img src="./assets/memory_card.png" alt="存储卡" class="tool-icon">
+          <div>
+            <h3>存储卡</h3>
+            <p>用于在 Mekanism 机器之间复制和粘贴配置与升级。首次右键机器会复制配置，再次右键同类型机器会粘贴配置。</p>
+            <h4>使用方法</h4>
+            <ul>
+              <li>右键机器（无数据时）：复制该机器的配置与升级</li>
+              <li>右键同类型机器（有数据时）：粘贴配置，必要时消耗升级模块</li>
+              <li>潜行 + 右键空气：清除已保存的配置</li>
+            </ul>
+            <h4>注意事项</h4>
+            <ul>
+              <li>目标机器类型必须与源机器一致，否则会提示“机器类型不匹配”</li>
+              <li>升级模块可从绑定的 AE2 / QIO 网络中自动抽取</li>
+              <li>创造模式下粘贴配置不消耗任何升级材料</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="tool-section" id="super-fusion-card">
+          <img src="./assets/super_fusion_card.png" alt="超级融合卡" class="tool-icon">
+          <div>
+            <h3>超级融合卡</h3>
+            <p>将等级安装、升级模块安装和存储卡复制 / 粘贴功能融合于一体的终极工具。适合已经熟悉前三件工具的玩家，一个物品即可应对所有批量场景。</p>
+            <h4>快捷键</h4>
+            <ul>
+              <li>Ctrl + 右键空气：在等级安装 / 安装升级 / 内存复制粘贴之间切换</li>
+              <li>Ctrl + Shift + 右键空气：切换范围 / 单个模式</li>
+              <li>Shift + 右键空气：切换模块选区模式</li>
+              <li>Alt + 右键空气：清除已保存的内存数据</li>
+              <li>右键机器：执行当前融合模式（会阻止机器界面打开）</li>
+              <li>中键机器：自动安装所有支持的升级模块</li>
+            </ul>
+            <h4>融合模式</h4>
+            <ul>
+              <li><strong>等级安装</strong>：将机器向终极等级升级</li>
+              <li><strong>安装升级</strong>：安装或移除升级模块，右键空气切换安装 / 移除</li>
+              <li><strong>内存复制 / 粘贴</strong>：无数据时复制，有数据时粘贴</li>
+            </ul>
+            <h4>网络联动</h4>
+            <p>与终极等级安装器和批量升级配置器相同，超级融合卡可以从绑定的 AE2 网络或 QIO 频道抽取等级安装器和升级模块。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="recipes" style="background:var(--bg2);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);">
+      <div class="container">
+        <div class="section-header">
+          <h2>合成配方</h2>
+          <p>所有工具均使用 Mekanism 原版材料合成，无需额外添加新矿物。</p>
+        </div>
+        <div class="feature-grid">
+          <div class="recipe-card">
+            <h4><img src="./assets/super_fusion_card.png" alt="">超级融合卡</h4>
+            <div class="recipe-grid-3x3">
+              <div class="recipe-cell">钢锭</div><div class="recipe-cell">批量升级配置器</div><div class="recipe-cell">钢锭</div>
+              <div class="recipe-cell">存储卡</div><div class="recipe-cell">基础能量立方</div><div class="recipe-cell">存储卡</div>
+              <div class="recipe-cell">配置卡</div><div class="recipe-cell">锇锭</div><div class="recipe-cell">钢锭</div>
+            </div>
+          </div>
+
+          <div class="recipe-card">
+            <h4><img src="./assets/ultimate_tier_installer.png" alt="">终极等级安装器</h4>
+            <div class="recipe-grid-3x3">
+              <div class="recipe-cell">终极控制电路</div><div class="recipe-cell">传送机</div><div class="recipe-cell">终极控制电路</div>
+              <div class="recipe-cell">终极物流管道</div><div class="recipe-cell">终极能量立方</div><div class="recipe-cell">终极物流管道</div>
+              <div class="recipe-cell">钋球</div><div class="recipe-cell">结构玻璃</div><div class="recipe-cell">钚球</div>
+            </div>
+          </div>
+
+          <div class="recipe-card">
+            <h4><img src="./assets/mass_upgrade_configurator.png" alt="">批量升级配置器</h4>
+            <div class="recipe-grid-3x3">
+              <div class="recipe-cell">原子合金</div><div class="recipe-cell">终极控制电路</div><div class="recipe-cell">原子合金</div>
+              <div class="recipe-cell">终极控制电路</div><div class="recipe-cell">配置卡</div><div class="recipe-cell">终极控制电路</div>
+              <div class="recipe-cell">原子合金</div><div class="recipe-cell">终极控制电路</div><div class="recipe-cell">原子合金</div>
+            </div>
+          </div>
+
+          <div class="recipe-card">
+            <h4><img src="./assets/memory_card.png" alt="">存储卡</h4>
+            <div class="recipe-grid-3x3">
+              <div class="recipe-cell">HDPE 板</div><div class="recipe-cell">钋球</div><div class="recipe-cell">HDPE 板</div>
+              <div class="recipe-cell">终极控制电路</div><div class="recipe-cell">配置卡</div><div class="recipe-cell">终极控制电路</div>
+              <div class="recipe-cell">钋球</div><div class="recipe-cell">QIO 驱动器基座</div><div class="recipe-cell">钋球</div>
+            </div>
+          </div>
+        </div>
+        <div class="recipe-card" style="margin-top:1.5rem;">
+          <h4><img src="./assets/guide_book.png" alt="">指南书</h4>
+          <p style="color:var(--muted);margin-top:0.5rem;">合成配方：<code>书</code> + <code>批量升级配置器</code>，无序合成。右键打开游戏内 GuideME 指南。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="controls">
+      <div class="container">
+        <div class="section-header" style="text-align:left;margin-left:0;">
+          <h2>操作对照表</h2>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>工具</th>
+                <th>操作</th>
+                <th>效果</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>终极等级安装器</td>
+                <td>右键机器</td>
+                <td>将单台机器升级到终极等级</td>
+              </tr>
+              <tr>
+                <td>终极等级安装器</td>
+                <td>Ctrl + 右键</td>
+                <td>切换区域升级模式</td>
+              </tr>
+              <tr>
+                <td>批量升级配置器</td>
+                <td>右键空气</td>
+                <td>切换安装 / 移除模式</td>
+              </tr>
+              <tr>
+                <td>批量升级配置器</td>
+                <td>潜行 + 右键空气</td>
+                <td>切换半径 / 选区模式</td>
+              </tr>
+              <tr>
+                <td>批量升级配置器</td>
+                <td>潜行 + 右键机器</td>
+                <td>对相邻机器执行批量操作</td>
+              </tr>
+              <tr>
+                <td>批量升级配置器</td>
+                <td>中键机器</td>
+                <td>自动安装所有支持的升级模块</td>
+              </tr>
+              <tr>
+                <td>存储卡</td>
+                <td>右键机器</td>
+                <td>无数据时复制，有数据时粘贴</td>
+              </tr>
+              <tr>
+                <td>存储卡</td>
+                <td>潜行 + 右键空气</td>
+                <td>清除已保存的配置</td>
+              </tr>
+              <tr>
+                <td>超级融合卡</td>
+                <td>Ctrl + 右键空气</td>
+                <td>切换融合模式</td>
+              </tr>
+              <tr>
+                <td>超级融合卡</td>
+                <td>Ctrl + Shift + 右键空气</td>
+                <td>切换范围 / 单个模式</td>
+              </tr>
+              <tr>
+                <td>超级融合卡</td>
+                <td>Shift + 右键空气</td>
+                <td>切换模块选区模式</td>
+              </tr>
+              <tr>
+                <td>超级融合卡</td>
+                <td>Alt + 右键空气</td>
+                <td>清除已保存的内存数据</td>
+              </tr>
+              <tr>
+                <td>超级融合卡</td>
+                <td>中键机器</td>
+                <td>批量安装所有支持的升级模块</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="tips" style="background:var(--bg2);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);">
+      <div class="container">
+        <div class="section-header" style="text-align:left;margin-left:0;">
+          <h2>使用技巧</h2>
+        </div>
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>优先绑定网络</h3>
+            <p>后期工厂通常将升级物品存放在 AE2 或 QIO 中。提前绑定网络后，工具会自动从网络抽取，无需随身携带成组的安装器。</p>
+          </div>
+          <div class="info-card">
+            <h3>善用选区模式</h3>
+            <p>当机器呈规则阵列摆放时，使用选区模式可以精确控制影响范围，避免误操作相邻的其他设备。</p>
+          </div>
+          <div class="info-card">
+            <h3>中键快捷升级</h3>
+            <p>不确定某台机器支持哪些升级？直接中键点击，工具会自动计算并安装所有支持的升级模块到满级。</p>
+          </div>
+          <div class="info-card">
+            <h3>能量管理</h3>
+            <p>终极等级安装器和超级融合卡都需要 FE 能量。建议在基地常备能量立方或无线充电设备，操作前检查电量。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="./assets/super_fusion_card.png" alt="Mekanism Card">
+          Mekanism Card
+        </div>
+        <ul class="footer-links">
+          <li><a href="./mekanism-card.html">介绍</a></li>
+          <li><a href="./tutorial.html">教程</a></li>
+          <li><a href="https://github.com/rulanup/Mekanism-Card" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.curseforge.com/minecraft/mc-mods/mekanism-card" target="_blank" rel="noopener">CurseForge</a></li>
+        </ul>
+        <p class="copyright">基于 GNU GPLv3 许可证发布。本站为 Mekanism Card 模组中文介绍页面。</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
